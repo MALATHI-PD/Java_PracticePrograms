@@ -1,0 +1,38 @@
+package practice_javaa;
+class Person{
+	public String name;
+	public int age;
+	protected int ssn;
+	String address;
+	Person(String name,int age,int ssn,String address){
+		this.name=name;
+		this.age=age;
+		this.ssn=ssn;
+		this.address=address;
+	}
+}
+class Employee extends Person{
+	Employee(String name,int age,int ssn,String address){
+		super(name,age,ssn,address);
+		System.out.println("Hello");
+	}
+	
+}
+
+public class Access_Specifiers {
+	public static void main(String args[]) {
+		Employee e=new Employee("Malathi",20,45837,"Palani");
+		System.out.println("Name:"+e.name+"Age:"+e.age+"ssn:"+e.ssn+"Address:"+e.address);
+	}
+
+}
+
+
+
+
+
+
+output:
+
+Hello
+Name:MalathiAge:20ssn:45837Address:Palani
