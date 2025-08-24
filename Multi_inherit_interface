@@ -1,0 +1,25 @@
+package practice_javaa;
+interface Printable{
+	void display();
+}
+interface Showable{
+	void display();
+
+}
+class Document implements Printable,Showable{
+	public void display() {
+		System.out.println("Supera Work aguthu");
+		
+	}
+}
+public class Multi_inherit_interface {
+	public static void main(String args[]) {
+		Document d=new Document();
+		d.display();
+	}
+}
+
+
+output:
+
+Supera Work aguthu
