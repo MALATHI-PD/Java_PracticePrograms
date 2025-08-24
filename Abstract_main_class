@@ -1,0 +1,45 @@
+package practice_javaa;
+abstract class Animal{
+	abstract void makesound();
+	String name;
+	Animal(String name) {
+		this.name=name;
+	}
+	
+}
+class Dog extends Animal{
+	Dog(String name){
+		super(name);
+	}
+	void makesound() {
+		System.out.println("Barkk...");
+	}
+}
+class Cat extends Animal{
+	Cat(String name){
+		super(name);
+	}
+	void makesound() {
+		System.out.println("Meoww...");
+	}
+}
+
+public class Abstract_main_class {
+	public static void main(String args[]) {
+		Dog d=new Dog("Dommy");
+		System.out.println(d.name);
+		d.makesound();
+		Cat c=new Cat("Pookiee");
+		System.out.println(c.name);
+		c.makesound();
+	}
+
+}
+
+output:
+
+Dommy
+Barkk...
+Pookiee
+Meoww...
+
