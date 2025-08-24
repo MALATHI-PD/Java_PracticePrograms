@@ -1,0 +1,49 @@
+package practice_javaa;
+abstract class Vehicle{
+	String type;
+	abstract void drive();
+	final void startEngine() {
+		System.out.println("Engine Started....");
+	}
+	static String getVehicleType() {
+		return "GENERAL VEHICLE";
+	}
+}
+class Car extends Vehicle{
+	void drive() {
+		System.out.println("car good");
+	}
+}
+class Motorcycle extends Car{
+	void drive() {
+		System.out.println("mc good");
+
+	}
+}
+
+public class Combined_concepts {
+	public static void main(String args[] ){
+		Car c=new Car();
+		c.startEngine();
+		c.drive();
+		System.out.println(Vehicle.getVehicleType());
+
+		Motorcycle m=new Motorcycle();
+		m.startEngine();
+		m.drive();
+		System.out.println(Vehicle.getVehicleType());
+	}
+
+}
+
+
+
+output:
+
+Engine Started....
+car good
+GENERAL VEHICLE
+Engine Started....
+mc good
+GENERAL VEHICLE
+
